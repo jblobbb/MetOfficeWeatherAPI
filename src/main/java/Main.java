@@ -8,11 +8,11 @@ public class Main {
 
         //Public API
         //My API key ab246824-a21b-4aee-aeb6-af1f12e3e6f7
-        //Get weather for Dunkeswell Aerodrome http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/xml/3840?res=3hourly&key=ab246824-a21b-4aee-aeb6-af1f12e3e6f7
+        //Get weather for Bristol http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/350612?res=3hourly&key=ab246824-a21b-4aee-aeb6-af1f12e3e6f7
 
         try {
 
-            URL url = new URL("http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/xml/3840?res=3hourly&key=ab246824-a21b-4aee-aeb6-af1f12e3e6f7");
+            URL url = new URL("http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/350612?res=3hourly&key=ab246824-a21b-4aee-aeb6-af1f12e3e6f7");
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
