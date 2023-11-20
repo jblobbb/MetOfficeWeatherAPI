@@ -32,13 +32,15 @@ public class Main {
                 throw new RuntimeException("HttpResponseCode: " + responseCode);
             } else {
 
-                Scanner scanner = new Scanner(url.openStream());
+                System.out.println(conn.getContentType());
 
-                while (scanner.hasNext()) {
-                    System.out.println(scanner.nextLine());
-                }
-
-                scanner.close();
+//                Scanner scanner = new Scanner(url.openStream());
+//
+//                while (scanner.hasNext()) {
+//                    System.out.println(scanner.nextLine());
+//                }
+//
+//                scanner.close();
             }
 
         } catch (Exception e) {
