@@ -1,6 +1,14 @@
+import netscape.javascript.JSObject;
+
+
+import java.io.FileReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Map;
 import java.util.Scanner;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 public class Main {
 
@@ -24,16 +32,14 @@ public class Main {
             if (responseCode != 200) {
                 throw new RuntimeException("HttpResponseCode: " + responseCode);
             } else {
-                StringBuilder informationString = new StringBuilder();
+
                 Scanner scanner = new Scanner(url.openStream());
 
                 while (scanner.hasNext()) {
-                    informationString.append(scanner.nextLine());
+                    System.out.println(scanner.nextLine());
                 }
-                //Close scanner
-                scanner.close();
 
-                System.out.println(informationString);
+                scanner.close();
             }
 
         } catch (Exception e) {
