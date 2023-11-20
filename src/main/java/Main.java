@@ -31,8 +31,14 @@ public class Main {
             JSONObject siteRep = (JSONObject) json.get("SiteRep");
             JSONObject DV = (JSONObject) siteRep.get("DV");
             JSONObject Location = (JSONObject) DV.get("Location");
+
+
+            String elevation = (String) Location.get("elevation");
+            System.out.println(elevation);
+
             String LocationName = (String) Location.get("name");
             System.out.println(LocationName);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
